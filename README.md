@@ -28,10 +28,7 @@ python>=3.8
 numpy  
 pandas  
 argparse  
-cooler   
-h5py  
-scipy.stats   
-statsmodels.stats.multitest  
+pyranges 
 
 #### pip install ExpreLev==1.0.3
 https://pypi.org/project/ExpreLev/1.0.3/
