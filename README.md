@@ -21,6 +21,7 @@ optional arguments:
 | -b |  --BED | --bed|BED|the bed annotation file|
 | -i | --INPUT  | --input | INPUT |input file (raw read count matrices)  |  
 | -d | --DEPTH  | --depth |DEPTH|the total mapped reads file|
+| -t | --TYPEID  | --typeid |TYPEID|TPM/CPM/FPKM|
 | -o | --OUT    | --out |  OUT |name of output file  |
 
 
