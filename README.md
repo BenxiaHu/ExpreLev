@@ -4,7 +4,7 @@ This tutorial will introduce how to run ExpreLev to obtain TPM/CPM/FPKM.
 ### ExpreLev can be used to obtain TPM/CPM/FPKM based on raw read count matrices.  
 
 #### usage: 
-```ExpreLevGene [-h] -g GTF -i INPUT -d DEPTH -t TYPEID [-o OUT]``` 
+```ExpreLevGene [-h] -g GTF -i INPUT -d DEPTH -t TYPEID [-o OUT]```
 ```ExpreLevExon [-h] -g GTF -i INPUT -d DEPTH -t TYPEID [-o OUT]```
 ```ExpreLevEpi [-h] -i INPUT -d DEPTH -t TYPEID [-o OUT]```
                      
