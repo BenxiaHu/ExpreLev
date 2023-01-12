@@ -16,9 +16,6 @@ optional arguments:
 | -I | INPUTPATH  | --inputpath | INPUTPATH |path of input file  |  
 | -f | FILENAME   | --filename    | FILENAME |name of input file |
 | -d | DISTANCE  | --distance |DISTANCE|the distance of distal chromation interactions|
-| -r    |   RESOLUTION| --resolution | RESOLUTION| resolution of contact matrix  | 
-| -O | OUTPATH    | --outpath |  OUTPATH |path of output file  |  
-| -c | CHRSIZE    | --chrsize |  CHRSIZE |chromosome size file  |
 | -o | OUTFILE    | --outfile |  OUTFILE |name of output file  |
 
 
@@ -33,5 +30,5 @@ h5py
 scipy.stats   
 statsmodels.stats.multitest  
 
-#### pip install DLR-ICF==1.0.3
-https://pypi.org/project/DLR-ICF/1.0.3/
+#### pip install ExpreLev==1.0.1
+https://pypi.org/project/ExpreLev/1.0.1/
