@@ -12,18 +12,26 @@ dir = os.path.dirname(os.path.abspath(__file__))
 version_py = os.path.join(dir, "_version.py")
 exec(open(version_py).read())
 
-def annotation(gtf,readcounts,depth,typeid,outfile):
-    geneanno = pyranges.read_gtf(gtf)
-    geneanno = geneanno[['Feature','gene_type','gene_id','gene_name']]
-    geneanno = geneanno[geneanno.Feature == "exon"]
-    geneanno = geneanno.merge(by=['gene_type','gene_id','gene_name'])
-    geneanno.length = geneanno.lengths() + 1
-    geneanno = geneanno.as_df()
-    geneanno = geneanno[['gene_type','gene_id','gene_name','size']]
-    geneanno = geneanno.groupby(['gene_type','gene_id','gene_name'],observed=True).agg('sum')
-    geneanno = geneanno.reset_index(level=['gene_type','gene_id','gene_name'])
-    geneanno['geneid'] = geneanno['gene_id'] + '|' + geneanno['gene_name']
-    geneanno = geneanno[['geneid','gene_type','size']]
+def annotation(readcounts,depth,typeid,outfile,gtf=None,bed=None):
+    if(gtf):
+        geneanno = pyranges.read_gtf(gtf)
+        geneanno = geneanno[['Feature','gene_type','gene_id','gene_name']]
+        geneanno = geneanno[geneanno.Feature == "gene"]
+        geneanno = geneanno.merge(by=['gene_type','gene_id','gene_name'])
+        geneanno.size = geneanno.lengths() + 1
+        geneanno = geneanno.as_df()
+        geneanno = geneanno[['Chromosome','Start','End','Strand','gene_type','gene_id','gene_name','size']]
+        geneanno.columns = ['chr','start','end','strand','gene_type','gene_id','gene_name','size']
+        geneanno = geneanno.groupby(['chr','start','end','strand','gene_type','gene_id','gene_name'],observed=True).agg('sum')
+        geneanno = geneanno.reset_index(level=['chr','start','end','strand','gene_type','gene_id','gene_name'])
+        geneanno['geneid'] = geneanno['gene_id'] + '|' + geneanno['gene_name']
+        geneanno = geneanno[['chr','start','end','strand','geneid','gene_type','size']]
+    else:
+        geneanno = pd.read_csv(bed,sep="\t",header=0)
+        geneanno.columns = ['chr','start','end','strand','gene_type','gene_id','gene_name']
+        geneanno['geneid'] = geneanno['gene_id'] + '|' + geneanno['gene_name']
+        geneanno['size'] = geneanno['end'].astype(int) - geneanno['start'].astype(int) + 1
+        geneanno = geneanno[['chr','start','end','strand','geneid','gene_type','size']]
 
     chrfile = pd.read_csv(readcounts,sep="\t",header=0)
     chrfile.columns.values[0]='geneid'
@@ -75,8 +83,9 @@ def annotation(gtf,readcounts,depth,typeid,outfile):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-g', '--gtf', dest='gtf',
-                        required=True,
                         help='gtf file')
+    parser.add_argument('-b', '--bed', dest='bed',
+                        help='bed file')
     parser.add_argument('-i', '--input', dest='input',
                         required=True,
                         help='input file')
@@ -95,7 +104,7 @@ def main():
     print('###Parameters:')
     print(args)
     print('###Parameters')
-    annotation(args.gtf,args.input,args.depth,args.typeid,args.out,args.version)
+    annotation(args.input,args.depth,args.typeid,args.out,args.gtf,args.bed,args.version)
 
 if __name__ == '__main__':
     main()
