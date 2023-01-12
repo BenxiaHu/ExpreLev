@@ -1,7 +1,7 @@
 # ExpreLev  
 This tutorial will introduce how to run ExpreLev to obtain TPM/CPM/FPKM.
 
-### ExpreLev can be used to obtain TPM/CPM/FPKM based on raw read count matrices.  
+### ExpreLev can be used to obtain TPM/CPM/FPKM for genes or peak regions based on raw read count matrices.  
 
 #### usage: 
 ##### calculate the expression levels for genes based on reads mapped to gene body (e.g., PRO-seq) 
