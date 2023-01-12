@@ -20,7 +20,7 @@ def annotation(readcounts,depth,typeid,outfile):
     newdf.columns = seqfile.columns
 
     chrfile['size'] = chrfile['end'].astype(int) - chrfile['start'].astype(int) + 1
-    id1 = ['chr','start','end','strand']
+    id1 = ['chr','start','end']
     ID = id1.copy()
     ID.extend(seqfile.columns.tolist())
 
