@@ -33,5 +33,5 @@ h5py
 scipy.stats   
 statsmodels.stats.multitest  
 
-#### pip install ExpreLev==1.0.2
-https://pypi.org/project/ExpreLev/1.0.2/
+#### pip install ExpreLev==1.0.3
+https://pypi.org/project/ExpreLev/1.0.3/
