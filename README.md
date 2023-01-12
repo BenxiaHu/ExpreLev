@@ -9,7 +9,7 @@ This tutorial will introduce how to run ExpreLev to obtain TPM/CPM/FPKM.
 ##### calculate the expression levels for genes based on reads mapped to gene exon (e.g., RNA-seq)
 ```ExpreLevExon [-h] -g GTF -i INPUT -d DEPTH -t TYPEID [-o OUT]```  
 ##### calculate the enrichment for epigenetic signals based on reads peak regions (e.g., ChIP-seq/ATAC-seq)
-**the the first 4 columns of input file is chr,start,end**  
+**the the first 3 columns of input file is chr,start,end**  
 ```ExpreLevEpi [-h] -i INPUT -d DEPTH -t TYPEID [-o OUT]```  
                      
 optional arguments:  
