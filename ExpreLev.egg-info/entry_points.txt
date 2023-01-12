@@ -1,3 +1,5 @@
 [console_scripts]
-ExpreLev = ExpreLev.ExpreLev_main:main
+ExpreLevEpi = ExpreLev.ExpreLevEpi:main
+ExpreLevExon = ExpreLev.ExpreLevExon:main
+ExpreLevGene = ExpreLev.ExpreLevGene:main
 

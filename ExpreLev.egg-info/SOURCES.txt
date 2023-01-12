@@ -1,6 +1,8 @@
 README.md
 setup.py
-ExpreLev/ExpreLev.py
+ExpreLev/ExpreLevEpi.py
+ExpreLev/ExpreLevExon.py
+ExpreLev/ExpreLevGene.py
 ExpreLev/__init__.py
 ExpreLev/_main__.py
 ExpreLev/_version.py

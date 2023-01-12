@@ -13,7 +13,9 @@ setup(
     long_description="analyze TPM/CPM/FPKM",
     url="https://pypi.org/project/ExpreLev/",
     entry_points = {
-        "console_scripts": ['ExpreLev = ExpreLev.ExpreLev_main:main',]
+        "console_scripts": ['ExpreLevGene = ExpreLev.ExpreLevGene:main',
+                            'ExpreLevExon = ExpreLev.ExpreLevExon:main',
+                            'ExpreLevEpi = ExpreLev.ExpreLevEpi:main',]
         },
     python_requires = '>=3.6',
     packages = ['ExpreLev'],
