@@ -4,19 +4,18 @@ This tutorial will introduce how to run ExpreLev to obtain TPM/CPM/FPKM.
 ### ExpreLev can be used to obtain TPM/CPM/FPKM based on raw read count matrices.  
 
 #### usage: 
-```ExpreLev [-h] [-b] -I INPUTPATH -f FILENAME -d DISTANCE -r RESOLUTION -O OUTPATH -c CHRSIZE -o OUTFILE``` 
-
-
+```ExpreLevGene [-h] -g GTF -i INPUT -d DEPTH -t TYPEID [-o OUT]``` 
+```ExpreLevExon [-h] -g GTF -i INPUT -d DEPTH -t TYPEID [-o OUT]```
+```ExpreLevEpi [-h] -i INPUT -d DEPTH -t TYPEID [-o OUT]```
                      
 optional arguments:  
 |  |   |    |   |   |
 |:----:|:-----:|:----:|:------:|:------:|  
 | -h |  |--help|| show this help message and exit |
-| -b ||  --balanced |   | contact matrix is iced or balanced |
-| -I | INPUTPATH  | --inputpath | INPUTPATH |path of input file  |  
-| -f | FILENAME   | --filename    | FILENAME |name of input file |
-| -d | DISTANCE  | --distance |DISTANCE|the distance of distal chromation interactions|
-| -o | OUTFILE    | --outfile |  OUTFILE |name of output file  |
+| -g ||  --GTF |   | standard GTF annotation file (https://www.gencodegenes.org/)|
+| -I | INPUT  | --input | INPUT |input file (raw read count matrices)  |  
+| -d | DEPTH  | --depth |DEPTH|the total mapped reads file|
+| -o | OUT    | --out |  OUT |name of output file  |
 
 
 ### Installation 
@@ -30,5 +29,5 @@ h5py
 scipy.stats   
 statsmodels.stats.multitest  
 
-#### pip install ExpreLev==1.0.1
-https://pypi.org/project/ExpreLev/1.0.1/
+#### pip install ExpreLev==1.0.2
+https://pypi.org/project/ExpreLev/1.0.2/
