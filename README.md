@@ -13,7 +13,7 @@ optional arguments:
 |:----:|:-----:|:----:|:------:|:------:|  
 | -h |  |--help|| show this help message and exit |
 | -g |  --GTF | --gtf|standard GTF annotation file (https://www.gencodegenes.org/)|
-| -I | --INPUT  | --input | INPUT |input file (raw read count matrices)  |  
+| -i | --INPUT  | --input | INPUT |input file (raw read count matrices)  |  
 | -d | --DEPTH  | --depth |DEPTH|the total mapped reads file|
 | -o | --OUT    | --out |  OUT |name of output file  |
 
