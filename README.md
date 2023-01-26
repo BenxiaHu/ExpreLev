@@ -35,3 +35,8 @@ pyranges
 
 #### pip install ExpreLev==1.0.4
 https://pypi.org/project/ExpreLev/1.0.4/
+
+#### conda install -c bxhu exprelev
+
+
+
