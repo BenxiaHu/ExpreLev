@@ -1,10 +1,10 @@
   package:
     name: exprelev
-    version: 1.0.4
+    version: 1.0.5
   
   source:
-    url: https://files.pythonhosted.org/packages/d4/72/9ec3391a29c8273d5d052eddcba74fb59e4612af7ae5b4648d029b004cfa/ExpreLev-1.0.4.tar.gz
-    md5: 2b9f2e7b3e7dbcef2d941e3f66282d8e
+    url: https://files.pythonhosted.org/packages/c8/c3/015e0c4e14f826001af9bc821fd803a5dcd5d5779428aaca0df45a7d68b9/ExpreLev-1.0.5.tar.gz
+    md5: 490790e4aa30f8b317a4142b04689216
 
   build:
     number: 0
