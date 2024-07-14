@@ -33,8 +33,8 @@ pandas
 argparse  
 pyranges 
 
-#### pip install ExpreLev==1.0.4
-https://pypi.org/project/ExpreLev/1.0.4/
+#### pip install ExpreLev==1.0.5
+https://pypi.org/project/ExpreLev/1.0.5/
 
 #### conda install -c bxhu exprelev
 
