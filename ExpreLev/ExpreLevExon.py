@@ -104,7 +104,7 @@ def main():
     print('###Parameters:')
     print(args)
     print('###Parameters')
-    annotation(args.input,args.depth,args.typeid,args.out,args.gtf,args.bed,args.version)
+    annotation(args.input,args.depth,args.typeid,args.out,args.gtf,args.bed)
 
 if __name__ == '__main__':
     main()

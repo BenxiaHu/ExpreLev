@@ -20,9 +20,9 @@ setup(
     python_requires = '>=3.6',
     packages = ['ExpreLev'],
     install_requires = [
-        'numpy',
-        'pandas',
-        'argparse',
+        'numpy ==1.23.1',
+        'pandas ==1.4.3',
+        'pyranges ==0.0.117',
     ],
     classifiers=(
         "Programming Language :: Python :: 3",

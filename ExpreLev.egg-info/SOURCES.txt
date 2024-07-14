@@ -4,7 +4,7 @@ ExpreLev/ExpreLevEpi.py
 ExpreLev/ExpreLevExon.py
 ExpreLev/ExpreLevGene.py
 ExpreLev/__init__.py
-ExpreLev/_main__.py
+ExpreLev/__main__.py
 ExpreLev/_version.py
 ExpreLev.egg-info/PKG-INFO
 ExpreLev.egg-info/SOURCES.txt
